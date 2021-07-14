@@ -12,6 +12,9 @@
 		F79C26F5269F607C0004B8B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79C26F3269F607C0004B8B7 /* Main.storyboard */; };
 		F79C26F7269F607F0004B8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79C26F6269F607F0004B8B7 /* Assets.xcassets */; };
 		F79C26FA269F607F0004B8B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79C26F8269F607F0004B8B7 /* LaunchScreen.storyboard */; };
+		F79C270E269F665B0004B8B7 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79C270D269F665B0004B8B7 /* Auth.storyboard */; };
+		F79C2710269F66B70004B8B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C270F269F66B70004B8B7 /* LoginViewController.swift */; };
+		F79C2713269F6CBC0004B8B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C2712269F6CBC0004B8B7 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		F79C26F6269F607F0004B8B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F79C26F9269F607F0004B8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F79C26FB269F607F0004B8B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F79C270D269F665B0004B8B7 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		F79C270F269F66B70004B8B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F79C2712269F6CBC0004B8B7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,113 @@
 		F79C26EC269F607C0004B8B7 /* Sneak Cinema */ = {
 			isa = PBXGroup;
 			children = (
-				F79C26ED269F607C0004B8B7 /* AppDelegate.swift */,
-				F79C26EF269F607C0004B8B7 /* SceneDelegate.swift */,
-				F79C26F3269F607C0004B8B7 /* Main.storyboard */,
-				F79C26F6269F607F0004B8B7 /* Assets.xcassets */,
-				F79C26F8269F607F0004B8B7 /* LaunchScreen.storyboard */,
-				F79C26FB269F607F0004B8B7 /* Info.plist */,
+				F79C2706269F657E0004B8B7 /* Resources */,
+				F79C2705269F65700004B8B7 /* Configurations */,
+				F79C2704269F65680004B8B7 /* Core */,
+				F79C2711269F6C5E0004B8B7 /* Extra's */,
+				F79C2703269F65530004B8B7 /* Controller */,
+				F79C2702269F654B0004B8B7 /* View */,
+				F79C2701269F65430004B8B7 /* Model */,
 			);
 			path = "Sneak Cinema";
+			sourceTree = "<group>";
+		};
+		F79C2701269F65430004B8B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F79C2702269F654B0004B8B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F79C270B269F660C0004B8B7 /* Storyboard's */,
+				F79C270A269F66030004B8B7 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F79C2703269F65530004B8B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F79C270C269F66340004B8B7 /* Authentication */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F79C2704269F65680004B8B7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F79C26ED269F607C0004B8B7 /* AppDelegate.swift */,
+				F79C26EF269F607C0004B8B7 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F79C2705269F65700004B8B7 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				F79C26FB269F607F0004B8B7 /* Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		F79C2706269F657E0004B8B7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F79C2709269F65BF0004B8B7 /* Fonts */,
+				F79C2708269F65B50004B8B7 /* Animations */,
+				F79C26F6269F607F0004B8B7 /* Assets.xcassets */,
+				F79C26F8269F607F0004B8B7 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F79C2708269F65B50004B8B7 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		F79C2709269F65BF0004B8B7 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F79C270A269F66030004B8B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F79C270B269F660C0004B8B7 /* Storyboard's */ = {
+			isa = PBXGroup;
+			children = (
+				F79C26F3269F607C0004B8B7 /* Main.storyboard */,
+				F79C270D269F665B0004B8B7 /* Auth.storyboard */,
+			);
+			path = "Storyboard's";
+			sourceTree = "<group>";
+		};
+		F79C270C269F66340004B8B7 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F79C270F269F66B70004B8B7 /* LoginViewController.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F79C2711269F6C5E0004B8B7 /* Extra's */ = {
+			isa = PBXGroup;
+			children = (
+				F79C2712269F6CBC0004B8B7 /* Extensions.swift */,
+			);
+			path = "Extra's";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +229,7 @@
 				F79C26FA269F607F0004B8B7 /* LaunchScreen.storyboard in Resources */,
 				F79C26F7269F607F0004B8B7 /* Assets.xcassets in Resources */,
 				F79C26F5269F607C0004B8B7 /* Main.storyboard in Resources */,
+				F79C270E269F665B0004B8B7 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,8 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F79C2710269F66B70004B8B7 /* LoginViewController.swift in Sources */,
 				F79C26EE269F607C0004B8B7 /* AppDelegate.swift in Sources */,
 				F79C26F0269F607C0004B8B7 /* SceneDelegate.swift in Sources */,
+				F79C2713269F6CBC0004B8B7 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +393,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GT2L62MLF3;
-				INFOPLIST_FILE = "Sneak Cinema/Info.plist";
+				INFOPLIST_FILE = "Sneak Cinema/Configurations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,7 +415,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GT2L62MLF3;
-				INFOPLIST_FILE = "Sneak Cinema/Info.plist";
+				INFOPLIST_FILE = "Sneak Cinema/Configurations/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
