@@ -3,24 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E3487F8287AE55F026E1178 /* Pods_Sneak_Cinema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11CAF1A82FDDCB71F1535DCC /* Pods_Sneak_Cinema.framework */; };
 		F79C26EE269F607C0004B8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C26ED269F607C0004B8B7 /* AppDelegate.swift */; };
-		F79C26F0269F607C0004B8B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C26EF269F607C0004B8B7 /* SceneDelegate.swift */; };
 		F79C26F5269F607C0004B8B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79C26F3269F607C0004B8B7 /* Main.storyboard */; };
 		F79C26F7269F607F0004B8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79C26F6269F607F0004B8B7 /* Assets.xcassets */; };
 		F79C26FA269F607F0004B8B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79C26F8269F607F0004B8B7 /* LaunchScreen.storyboard */; };
 		F79C270E269F665B0004B8B7 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79C270D269F665B0004B8B7 /* Auth.storyboard */; };
 		F79C2710269F66B70004B8B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C270F269F66B70004B8B7 /* LoginViewController.swift */; };
 		F79C2713269F6CBC0004B8B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C2712269F6CBC0004B8B7 /* Extensions.swift */; };
+		F7F2AAD226B0E39A006E7296 /* RifficFree-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7F2AAD126B0E399006E7296 /* RifficFree-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11CAF1A82FDDCB71F1535DCC /* Pods_Sneak_Cinema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sneak_Cinema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C077E9747DA98518D15FB64B /* Pods-Sneak Cinema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sneak Cinema.release.xcconfig"; path = "Target Support Files/Pods-Sneak Cinema/Pods-Sneak Cinema.release.xcconfig"; sourceTree = "<group>"; };
+		F1526E38C7BEC81872DA5762 /* Pods-Sneak Cinema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sneak Cinema.debug.xcconfig"; path = "Target Support Files/Pods-Sneak Cinema/Pods-Sneak Cinema.debug.xcconfig"; sourceTree = "<group>"; };
 		F79C26EA269F607C0004B8B7 /* Sneak Cinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sneak Cinema.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79C26ED269F607C0004B8B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F79C26EF269F607C0004B8B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F79C26F4269F607C0004B8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F79C26F6269F607F0004B8B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F79C26F9269F607F0004B8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		F79C270D269F665B0004B8B7 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		F79C270F269F66B70004B8B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F79C2712269F6CBC0004B8B7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F7F2AAD126B0E399006E7296 /* RifficFree-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RifficFree-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E3487F8287AE55F026E1178 /* Pods_Sneak_Cinema.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E91B23A4E3A232F3E765D2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1526E38C7BEC81872DA5762 /* Pods-Sneak Cinema.debug.xcconfig */,
+				C077E9747DA98518D15FB64B /* Pods-Sneak Cinema.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		929452B13777C46CBC6E34D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11CAF1A82FDDCB71F1535DCC /* Pods_Sneak_Cinema.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F79C26E1269F607C0004B8B7 = {
 			isa = PBXGroup;
 			children = (
 				F79C26EC269F607C0004B8B7 /* Sneak Cinema */,
 				F79C26EB269F607C0004B8B7 /* Products */,
+				1E91B23A4E3A232F3E765D2F /* Pods */,
+				929452B13777C46CBC6E34D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +84,7 @@
 		F79C26EC269F607C0004B8B7 /* Sneak Cinema */ = {
 			isa = PBXGroup;
 			children = (
+				F7F2AAD326B13A99006E7296 /* Utils */,
 				F79C2706269F657E0004B8B7 /* Resources */,
 				F79C2705269F65700004B8B7 /* Configurations */,
 				F79C2704269F65680004B8B7 /* Core */,
@@ -99,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				F79C26ED269F607C0004B8B7 /* AppDelegate.swift */,
-				F79C26EF269F607C0004B8B7 /* SceneDelegate.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -133,6 +157,7 @@
 		F79C2709269F65BF0004B8B7 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				F7F2AAD126B0E399006E7296 /* RifficFree-Bold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -169,6 +194,13 @@
 			path = "Extra's";
 			sourceTree = "<group>";
 		};
+		F7F2AAD326B13A99006E7296 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F79C26FE269F607F0004B8B7 /* Build configuration list for PBXNativeTarget "Sneak Cinema" */;
 			buildPhases = (
+				03D997EDA73BE590BB63A3F7 /* [CP] Check Pods Manifest.lock */,
 				F79C26E6269F607C0004B8B7 /* Sources */,
 				F79C26E7269F607C0004B8B7 /* Frameworks */,
 				F79C26E8269F607C0004B8B7 /* Resources */,
+				8354EC8278034C1F258E8A50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F79C26FA269F607F0004B8B7 /* LaunchScreen.storyboard in Resources */,
+				F7F2AAD226B0E39A006E7296 /* RifficFree-Bold.ttf in Resources */,
 				F79C26F7269F607F0004B8B7 /* Assets.xcassets in Resources */,
 				F79C26F5269F607C0004B8B7 /* Main.storyboard in Resources */,
 				F79C270E269F665B0004B8B7 /* Auth.storyboard in Resources */,
@@ -235,6 +270,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03D997EDA73BE590BB63A3F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sneak Cinema-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8354EC8278034C1F258E8A50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sneak Cinema/Pods-Sneak Cinema-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sneak Cinema/Pods-Sneak Cinema-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sneak Cinema/Pods-Sneak Cinema-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F79C26E6269F607C0004B8B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -242,7 +319,6 @@
 			files = (
 				F79C2710269F66B70004B8B7 /* LoginViewController.swift in Sources */,
 				F79C26EE269F607C0004B8B7 /* AppDelegate.swift in Sources */,
-				F79C26F0269F607C0004B8B7 /* SceneDelegate.swift in Sources */,
 				F79C2713269F6CBC0004B8B7 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +463,7 @@
 		};
 		F79C26FF269F607F0004B8B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1526E38C7BEC81872DA5762 /* Pods-Sneak Cinema.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -399,7 +476,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Denizey.SneakCinema.Sneak-Cinema";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Denizey.SneakCinema;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -409,6 +486,7 @@
 		};
 		F79C2700269F607F0004B8B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C077E9747DA98518D15FB64B /* Pods-Sneak Cinema.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -421,7 +499,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Denizey.SneakCinema.Sneak-Cinema";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Denizey.SneakCinema;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

@@ -12,6 +12,9 @@ import UIKit
 class CinemaView: UIView{}
 @IBDesignable
 class CinemaButton: UIButton{}
+@IBDesignable
+class CinemaLabel: UILabel{}
+
 
 extension UIView {
     
@@ -113,5 +116,82 @@ extension UIView {
         let angleInRadians = angleInDegrees / 180.0 * CGFloat.pi
         let rotation = self.transform.rotated(by: angleInRadians)
         self.transform = rotation
+    }
+}
+
+
+extension UILabel {
+    
+    
+    @IBInspectable var lshadowOpacity: Float {
+        get {
+            return layer.shadowOpacity
+        }
+        set {
+            layer.shadowOpacity = newValue
+        }
+    }
+    
+    @IBInspectable var lshadowRadius: CGFloat {
+        get {
+            return layer.shadowRadius
+        }
+        set {
+            layer.shadowRadius = newValue
+        }
+    }
+    
+    @IBInspectable var lshadowOffset: CGSize {
+        get {
+            return layer.shadowOffset
+        }
+        set {
+            layer.shadowOffset = newValue
+        }
+    }
+    
+    @IBInspectable var lshadowColor: UIColor? {
+        get {
+            return UIColor(cgColor: layer.shadowColor!)
+        }
+        set {
+            layer.shadowColor = newValue?.cgColor
+        }
+    }
+}
+
+
+@IBDesignable
+public class GradientButton: UIButton {
+    public override class var layerClass: AnyClass         { CAGradientLayer.self }
+    private var gradientLayer: CAGradientLayer             { layer as! CAGradientLayer }
+
+    @IBInspectable public var startColor: UIColor = .white { didSet { updateColors() } }
+    @IBInspectable public var endColor: UIColor = .red     { didSet { updateColors() } }
+
+    @IBInspectable public var startPoint: CGPoint {
+        get { gradientLayer.startPoint }
+        set { gradientLayer.startPoint = newValue }
+    }
+
+    @IBInspectable public var endPoint: CGPoint {
+        get { gradientLayer.endPoint }
+        set { gradientLayer.endPoint = newValue }
+    }
+
+    public override init(frame: CGRect = .zero) {
+        super.init(frame: frame)
+        updateColors()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        updateColors()
+    }
+}
+
+private extension GradientButton {
+    func updateColors() {
+        gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
     }
 }
