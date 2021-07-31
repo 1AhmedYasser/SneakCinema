@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E3487F8287AE55F026E1178 /* Pods_Sneak_Cinema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11CAF1A82FDDCB71F1535DCC /* Pods_Sneak_Cinema.framework */; };
+		F7991AB826B59BE500525E4D /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7991AB726B59BE500525E4D /* Validator.swift */; };
 		F79C26EE269F607C0004B8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C26ED269F607C0004B8B7 /* AppDelegate.swift */; };
 		F79C26F5269F607C0004B8B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79C26F3269F607C0004B8B7 /* Main.storyboard */; };
 		F79C26F7269F607F0004B8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79C26F6269F607F0004B8B7 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		11CAF1A82FDDCB71F1535DCC /* Pods_Sneak_Cinema.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sneak_Cinema.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C077E9747DA98518D15FB64B /* Pods-Sneak Cinema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sneak Cinema.release.xcconfig"; path = "Target Support Files/Pods-Sneak Cinema/Pods-Sneak Cinema.release.xcconfig"; sourceTree = "<group>"; };
 		F1526E38C7BEC81872DA5762 /* Pods-Sneak Cinema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sneak Cinema.debug.xcconfig"; path = "Target Support Files/Pods-Sneak Cinema/Pods-Sneak Cinema.debug.xcconfig"; sourceTree = "<group>"; };
+		F7991AB726B59BE500525E4D /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		F79C26EA269F607C0004B8B7 /* Sneak Cinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sneak Cinema.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79C26ED269F607C0004B8B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79C26F4269F607C0004B8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +65,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F7991AB926B5A50000525E4D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		F79C26E1269F607C0004B8B7 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +93,7 @@
 		F79C26EC269F607C0004B8B7 /* Sneak Cinema */ = {
 			isa = PBXGroup;
 			children = (
+				F7991AB926B5A50000525E4D /* Network */,
 				F7F2AAD326B13A99006E7296 /* Utils */,
 				F79C2706269F657E0004B8B7 /* Resources */,
 				F79C2705269F65700004B8B7 /* Configurations */,
@@ -197,6 +207,7 @@
 		F7F2AAD326B13A99006E7296 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				F7991AB726B59BE500525E4D /* Validator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -317,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7991AB826B59BE500525E4D /* Validator.swift in Sources */,
 				F79C2710269F66B70004B8B7 /* LoginViewController.swift in Sources */,
 				F79C26EE269F607C0004B8B7 /* AppDelegate.swift in Sources */,
 				F79C2713269F6CBC0004B8B7 /* Extensions.swift in Sources */,

@@ -30,7 +30,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sneak Cinema" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUZ-FG-Zat">
-                                <rect key="frame" x="30" y="144" width="233" height="42.5"/>
+                                <rect key="frame" x="30" y="144" width="228" height="41"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="RifficFree-Bold" family="Riffic Free" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -52,13 +52,13 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep your self updated with the latest box office movies 🍿" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbm-aM-Chg">
-                                <rect key="frame" x="30" y="196.5" width="344" height="38.5"/>
+                                <rect key="frame" x="30" y="195" width="344" height="37.5"/>
                                 <fontDescription key="fontDescription" name="RifficFree-Bold" family="Riffic Free" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wo1-2s-YLZ">
-                                <rect key="frame" x="50" y="335" width="314" height="114"/>
+                                <rect key="frame" x="50" y="332.5" width="314" height="114"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tU3-H8-bBj" customClass="SkyFloatingLabelTextFieldWithIcon" customModule="SkyFloatingLabelTextField">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="47"/>
@@ -147,7 +147,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdx-Oa-Gm3" customClass="GradientButton" customModule="Sneak_Cinema" customModuleProvider="target">
-                                <rect key="frame" x="100" y="499" width="214" height="40"/>
+                                <rect key="frame" x="100" y="496.5" width="214" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="VKy-ez-hQN"/>
                                 </constraints>
@@ -225,10 +225,10 @@
     </scenes>
     <designables>
         <designable name="dxG-Le-1wy">
-            <size key="intrinsicContentSize" width="95.5" height="34"/>
+            <size key="intrinsicContentSize" width="314" height="39.988671874999994"/>
         </designable>
         <designable name="tU3-H8-bBj">
-            <size key="intrinsicContentSize" width="97.5" height="34"/>
+            <size key="intrinsicContentSize" width="314" height="39.988671874999994"/>
         </designable>
         <designable name="wdx-Oa-Gm3">
             <size key="intrinsicContentSize" width="50" height="36"/>
