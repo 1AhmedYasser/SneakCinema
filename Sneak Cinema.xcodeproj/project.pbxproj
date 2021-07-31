@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		3E3487F8287AE55F026E1178 /* Pods_Sneak_Cinema.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11CAF1A82FDDCB71F1535DCC /* Pods_Sneak_Cinema.framework */; };
 		F7991AB826B59BE500525E4D /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7991AB726B59BE500525E4D /* Validator.swift */; };
+		F7991ABD26B5D59700525E4D /* NConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7991ABC26B5D59700525E4D /* NConstants.swift */; };
+		F7991AC026B5D7C200525E4D /* GuestSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7991ABF26B5D7C200525E4D /* GuestSession.swift */; };
+		F7991AC226B5D87B00525E4D /* RequestTokenCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7991AC126B5D87B00525E4D /* RequestTokenCreation.swift */; };
+		F7991AC426B5D8BA00525E4D /* CinemaNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7991AC326B5D8BA00525E4D /* CinemaNetwork.swift */; };
+		F7991AC626B5D98E00525E4D /* CinemaNetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7991AC526B5D98E00525E4D /* CinemaNetworkConfig.swift */; };
+		F7991AC826B5DF2500525E4D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7991AC726B5DF2500525E4D /* Constants.swift */; };
 		F79C26EE269F607C0004B8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79C26ED269F607C0004B8B7 /* AppDelegate.swift */; };
 		F79C26F5269F607C0004B8B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79C26F3269F607C0004B8B7 /* Main.storyboard */; };
 		F79C26F7269F607F0004B8B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F79C26F6269F607F0004B8B7 /* Assets.xcassets */; };
@@ -24,6 +30,12 @@
 		C077E9747DA98518D15FB64B /* Pods-Sneak Cinema.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sneak Cinema.release.xcconfig"; path = "Target Support Files/Pods-Sneak Cinema/Pods-Sneak Cinema.release.xcconfig"; sourceTree = "<group>"; };
 		F1526E38C7BEC81872DA5762 /* Pods-Sneak Cinema.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sneak Cinema.debug.xcconfig"; path = "Target Support Files/Pods-Sneak Cinema/Pods-Sneak Cinema.debug.xcconfig"; sourceTree = "<group>"; };
 		F7991AB726B59BE500525E4D /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		F7991ABC26B5D59700525E4D /* NConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NConstants.swift; sourceTree = "<group>"; };
+		F7991ABF26B5D7C200525E4D /* GuestSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestSession.swift; sourceTree = "<group>"; };
+		F7991AC126B5D87B00525E4D /* RequestTokenCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTokenCreation.swift; sourceTree = "<group>"; };
+		F7991AC326B5D8BA00525E4D /* CinemaNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaNetwork.swift; sourceTree = "<group>"; };
+		F7991AC526B5D98E00525E4D /* CinemaNetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CinemaNetworkConfig.swift; sourceTree = "<group>"; };
+		F7991AC726B5DF2500525E4D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F79C26EA269F607C0004B8B7 /* Sneak Cinema.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sneak Cinema.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79C26ED269F607C0004B8B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79C26F4269F607C0004B8B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,8 +80,20 @@
 		F7991AB926B5A50000525E4D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F7991ABC26B5D59700525E4D /* NConstants.swift */,
+				F7991AC326B5D8BA00525E4D /* CinemaNetwork.swift */,
+				F7991AC526B5D98E00525E4D /* CinemaNetworkConfig.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		F7991ABE26B5D7B200525E4D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F7991ABF26B5D7C200525E4D /* GuestSession.swift */,
+				F7991AC126B5D87B00525E4D /* RequestTokenCreation.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 		F79C26E1269F607C0004B8B7 = {
@@ -109,6 +133,7 @@
 		F79C2701269F65430004B8B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F7991ABE26B5D7B200525E4D /* Authentication */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				F79C2712269F6CBC0004B8B7 /* Extensions.swift */,
+				F7991AC726B5DF2500525E4D /* Constants.swift */,
 			);
 			path = "Extra's";
 			sourceTree = "<group>";
@@ -329,8 +355,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7991AB826B59BE500525E4D /* Validator.swift in Sources */,
+				F7991AC026B5D7C200525E4D /* GuestSession.swift in Sources */,
+				F7991AC626B5D98E00525E4D /* CinemaNetworkConfig.swift in Sources */,
 				F79C2710269F66B70004B8B7 /* LoginViewController.swift in Sources */,
 				F79C26EE269F607C0004B8B7 /* AppDelegate.swift in Sources */,
+				F7991AC826B5DF2500525E4D /* Constants.swift in Sources */,
+				F7991ABD26B5D59700525E4D /* NConstants.swift in Sources */,
+				F7991AC426B5D8BA00525E4D /* CinemaNetwork.swift in Sources */,
+				F7991AC226B5D87B00525E4D /* RequestTokenCreation.swift in Sources */,
 				F79C2713269F6CBC0004B8B7 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

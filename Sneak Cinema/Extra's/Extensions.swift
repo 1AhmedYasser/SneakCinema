@@ -195,3 +195,9 @@ private extension GradientButton {
         gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
     }
 }
+
+extension String {
+    var url: URL {
+        return URL(string: self)!
+    }
+}

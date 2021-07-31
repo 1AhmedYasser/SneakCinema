@@ -30,7 +30,13 @@ class LoginViewController: UIViewController {
     
     @IBAction func login(_ sender: GradientButton) {
         if validateFields() {
-            print("login")
+            CinemaNetwork.cinemaRequest(NConstants.createRequestToken) { session, error in
+                if let error = error {
+                    print(error)
+                } else {
+                    print("el request token ya m3lm \(session?.request_token  ?? "")")
+                }
+            }
         }
     }
     
