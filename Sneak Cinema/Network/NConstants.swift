@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class NConstants {
-    static let baseURL:String = "https://api.themoviedb.org/3/"
+    static let baseURL: String = "https://api.themoviedb.org/3/"
     
     // MARK: Endpoints - // Models
     
