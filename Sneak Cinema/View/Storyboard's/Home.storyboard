@@ -11,9 +11,15 @@
         <!--Navigation Controller-->
         <scene sceneID="0f2-nM-jiy">
             <objects>
-                <navigationController navigationBarHidden="YES" id="3ej-Af-BlO" sceneMemberID="viewController">
+                <navigationController id="3ej-Af-BlO" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="ay1-Ap-N01">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Ck5-tm-8UE" kind="relationship" relationship="rootViewController" id="439-Mp-KlX"/>
@@ -28,11 +34,11 @@
             <objects>
                 <viewController id="Ck5-tm-8UE" customClass="HomeVC" customModule="Sneak_Cinema" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="crd-bn-Lbh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VeC-h4-LlI" customClass="ScalingCarouselView" customModule="ScalingCarousel">
-                                <rect key="frame" x="0.0" y="64" width="414" height="220"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="220"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="urA-HB-TWj"/>
@@ -46,7 +52,7 @@
                                 <cells/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="inset">
-                                        <real key="value" value="44"/>
+                                        <real key="value" value="70"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -64,7 +70,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="HomeTabIcon" id="NRH-0W-spa"/>
-                    <navigationItem key="navigationItem" id="AKL-PJ-sJ9"/>
+                    <navigationItem key="navigationItem" title="Home" id="AKL-PJ-sJ9"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="carousel" destination="VeC-h4-LlI" id="nOa-75-aBd"/>

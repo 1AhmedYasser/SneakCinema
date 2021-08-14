@@ -17,6 +17,10 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         self.carousel.register(UINib.init(nibName: "HomeSliderCell", bundle: nil), forCellWithReuseIdentifier: "SliderCell")
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 }
 
 // MARK: Data Sources
