@@ -12,8 +12,10 @@ import Alamofire
 class CinemaNetwork {
     class func cinemaRequest<ResponseType: Decodable>(
         _ endpoint: (String,ResponseType.Type),
+        _ viewController: UIViewController = UIViewController(),
         _ params: Parameters = [:],
         _ method: HTTPMethod = .get,
+        _ showError: Bool = true,
         _ paramEndcoding: CinemaNetworkConfig.RequestEncoding = .url,
         files: [String: (Data, String)]? = nil,
         isMultipart: Bool = false,
@@ -25,18 +27,17 @@ class CinemaNetwork {
             method: method,
             responseType: endpoint.1,
             paramEncoding: paramEndcoding,
+            viewController: viewController,
+            showError: showError,
             files: files,
             isMultipart: isMultipart
         ) { (response, errorMessage, error) in
-            if error != nil {
-                completionHandler(nil,error?.localizedDescription ?? "Error")
-                return
-            }
             if errorMessage.isEmpty == false {
                 completionHandler(nil,errorMessage)
             } else {
                 completionHandler(response,nil)
             }
+            
         }
     }
     
@@ -46,6 +47,8 @@ class CinemaNetwork {
         method: HTTPMethod = .get,
         responseType: ResponseType.Type,
         paramEncoding: CinemaNetworkConfig.RequestEncoding = .url,
+        viewController: UIViewController = UIViewController(),
+        showError: Bool = true,
         files: [String: (Data, String)]? = nil,
         isMultipart: Bool = false,
         completion: @escaping (ResponseType?,String, Error?) -> Void) {
@@ -57,13 +60,15 @@ class CinemaNetwork {
         } else {
             (req, manager) = request(url: url, params, method: method, responseType: responseType, headers: CinemaNetworkConfig.getHeaders(), paramEncoding: paramEncoding)
         }
+                
         req!
             .validate(statusCode: 200...300)
             .responseJSON { response in
-                handleResponse(response, url: url, completion: completion)
+                handleResponse(response,viewController,showError, url: url, completion: completion)
                 manager.session.invalidateAndCancel()
             }
-    }
+        
+        }
     
     class func request<ResponseType: Decodable>(
         url: URL,
@@ -114,6 +119,8 @@ class CinemaNetwork {
     
     class func handleResponse<ResponseType: Decodable>(
         _ response: AFDataResponse<Any>,
+        _ viewController: UIViewController = UIViewController(),
+        _ showError: Bool = true,
         url: URL,
         completion: @escaping (ResponseType?,String, Error?) -> Void
     ) {
@@ -125,12 +132,29 @@ class CinemaNetwork {
                     completion(responseObject,"",nil)
                 }
             } catch {
-                print(error)
+                if showError {
+                    Alerter.showAlert(message: error.localizedDescription, controller: viewController)
+                }
+                print(error.localizedDescription)
                 completion(nil,"",error)
                 
             }
         case .failure(let error):
-            print(error)
+            do {
+                let responseObject = try JSONDecoder().decode(ErrorResponse.self, from: response.data!)
+                if showError {
+                    Alerter.showAlert(message: responseObject.status_message ?? "", controller: viewController)
+                }
+                DispatchQueue.main.async {
+                    completion(nil,responseObject.status_message ?? "",error)
+                }
+            } catch {
+                if showError {
+                    Alerter.showAlert(message: error.localizedDescription, controller: viewController)
+                }
+                print(error.localizedDescription)
+                completion(nil,"",error)
+            }
         }
     }
 }

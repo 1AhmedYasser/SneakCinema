@@ -16,6 +16,7 @@ class NConstants {
     // Authentication
     static let guestSession = ("authentication/guest_session/new", GuestSession.self)
     static let createRequestToken = ("authentication/token/new", RequestTokenCreation.self)
+    static let createSessionWithLogin = ("authentication/token/validate_with_login", CreateSessionWithLogin.self)
 
     static func endpoint(_ endpoint: String) -> URL {
         return "\(baseURL)\(endpoint)".url

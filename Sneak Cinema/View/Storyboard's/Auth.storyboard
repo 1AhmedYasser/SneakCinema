@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XPX-3B-8c9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -14,9 +14,25 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qVs-iE-OJh">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="XPX-3B-8c9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F0V-Kh-Sfn">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="q88-ME-bDa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hry-ws-1q4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-735" y="106"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Y6W-OH-hqX" customClass="LoginViewController" customModule="Sneak_Cinema" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -146,6 +162,22 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IQ-xK-tGY">
+                                <rect key="frame" x="189.5" y="566.5" width="35" height="28"/>
+                                <fontDescription key="fontDescription" name="RifficFree-Bold" family="Riffic Free" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IU-Wd-UGc">
+                                <rect key="frame" x="110" y="634.5" width="194" height="39"/>
+                                <fontDescription key="fontDescription" name="RifficFree-Bold" family="Riffic Free" pointSize="23"/>
+                                <state key="normal" title="Continue As Guest">
+                                    <color key="titleColor" red="0.36470588240000001" green="0.08235294118" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAsGuest:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="XoW-yt-XPp"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdx-Oa-Gm3" customClass="GradientButton" customModule="Sneak_Cinema" customModuleProvider="target">
                                 <rect key="frame" x="100" y="496.5" width="214" height="40"/>
                                 <constraints>
@@ -188,42 +220,64 @@
                                     <action selector="login:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="m5W-F5-24t"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cej-nH-4EI" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="147" y="388" width="120" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="720-8Z-kEb"/>
+                                    <constraint firstAttribute="height" constant="120" id="qa4-h3-Qp8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="circleStrokeSpin"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7IQ-xK-tGY" firstAttribute="top" secondItem="wdx-Oa-Gm3" secondAttribute="bottom" constant="30" id="5KP-fh-B3B"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wdx-Oa-Gm3" secondAttribute="trailing" constant="100" id="7Dt-uk-z7C"/>
+                            <constraint firstItem="cej-nH-4EI" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Av7-Go-t2P"/>
                             <constraint firstItem="DUu-N4-BNc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="DHP-ar-9o4"/>
                             <constraint firstItem="Act-ci-fmA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="FeA-Qw-Gwg"/>
                             <constraint firstItem="Wo1-2s-YLZ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="HIv-4M-FUJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wo1-2s-YLZ" secondAttribute="trailing" constant="50" id="HTj-ji-M38"/>
                             <constraint firstAttribute="trailing" secondItem="mbm-aM-Chg" secondAttribute="trailing" constant="40" id="Il4-ht-E6l"/>
+                            <constraint firstItem="3IU-Wd-UGc" firstAttribute="centerX" secondItem="7IQ-xK-tGY" secondAttribute="centerX" id="Km5-CL-ums"/>
                             <constraint firstItem="wdx-Oa-Gm3" firstAttribute="top" secondItem="Wo1-2s-YLZ" secondAttribute="bottom" constant="50" id="Qdu-PB-bVq"/>
                             <constraint firstItem="Act-ci-fmA" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="WAR-7e-5XF"/>
+                            <constraint firstItem="7IQ-xK-tGY" firstAttribute="centerX" secondItem="wdx-Oa-Gm3" secondAttribute="centerX" id="YBd-Tj-ePZ"/>
                             <constraint firstItem="RUZ-FG-Zat" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="YL3-Po-PyP"/>
                             <constraint firstItem="mbm-aM-Chg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="aTC-rV-qtU"/>
                             <constraint firstAttribute="bottom" secondItem="DUu-N4-BNc" secondAttribute="bottom" id="dJG-xt-6Ez"/>
                             <constraint firstItem="wdx-Oa-Gm3" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="jWf-cz-Qx9"/>
                             <constraint firstItem="mbm-aM-Chg" firstAttribute="top" secondItem="RUZ-FG-Zat" secondAttribute="bottom" constant="10" id="lSr-YY-shg"/>
                             <constraint firstItem="DUu-N4-BNc" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="lXQ-4v-Q0i"/>
+                            <constraint firstItem="3IU-Wd-UGc" firstAttribute="top" secondItem="7IQ-xK-tGY" secondAttribute="bottom" constant="40" id="lqr-G4-2aa"/>
                             <constraint firstItem="Wo1-2s-YLZ" firstAttribute="top" secondItem="mbm-aM-Chg" secondAttribute="bottom" constant="100" id="p7f-7Q-qFE"/>
                             <constraint firstItem="DUu-N4-BNc" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="rjC-Fy-zBm"/>
                             <constraint firstAttribute="bottom" secondItem="Act-ci-fmA" secondAttribute="bottom" id="sQf-jJ-hdl"/>
+                            <constraint firstItem="cej-nH-4EI" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="w2f-VM-FAy"/>
                             <constraint firstItem="RUZ-FG-Zat" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="100" id="wIG-jR-tde"/>
                             <constraint firstItem="Act-ci-fmA" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="zeB-zd-WJ5"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="a1Z-zP-2ih"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="cej-nH-4EI" id="2Uk-zY-Ks7"/>
                         <outlet property="emailTextField" destination="tU3-H8-bBj" id="hbs-n8-VNi"/>
                         <outlet property="passwordTextField" destination="dxG-Le-1wy" id="yZX-ND-a37"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="129" y="106"/>
+            <point key="canvasLocation" x="128.98550724637681" y="105.80357142857143"/>
         </scene>
     </scenes>
     <designables>
+        <designable name="cej-nH-4EI"/>
         <designable name="dxG-Le-1wy">
             <size key="intrinsicContentSize" width="314" height="39.988671874999994"/>
         </designable>
